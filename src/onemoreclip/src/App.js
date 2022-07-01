@@ -3,6 +3,7 @@ import Features from "./components/Features";
 import Introduction from "./components/Introduction";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
+import { useEffect } from "react";
 
 function App() {
     const introductionData = [
@@ -39,6 +40,17 @@ function App() {
         },
     ];
 
+    useEffect(() => {
+        const navigation = document.querySelector(".navigation");
+        const navigationBtn = document.querySelector(".navigation__button");
+        const overlay = document.querySelector(".overlay");
+        navigationBtn.addEventListener("click", function (e) {
+            navigation.classList.toggle("active");
+            overlay.classList.toggle("active");
+            // console.log("click");
+        });
+    }, []);
+
     return (
         <>
             <Header />
@@ -48,6 +60,7 @@ function App() {
             ))}
             <ContactUs />
             <Footer />
+            <div className="overlay"></div>
         </>
     );
 }
