@@ -36,7 +36,10 @@
     ]
   },
   "devDependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
     "react-icons": "^4.4.0",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
     "sass": "^1.53.0",
     "scrollreveal": "^4.0.9"
   }
