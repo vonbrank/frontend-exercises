@@ -1,6 +1,8 @@
 import Header from "./components/Header";
 import Features from "./components/Features";
 import Introduction from "./components/Introduction";
+import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
 
 function App() {
     const introductionData = [
@@ -22,7 +24,8 @@ function App() {
                 "可为您提供质量上乘的视频作品",
                 "我们曾与南宁市第二中学、广西育杰教育集团达成合作",
             ],
-            backgroundImageSrc: "https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/home/street-min.jpg",
+            backgroundImageSrc:
+                "https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/home/street-min.jpg",
         },
         {
             title: "活动策划与执行",
@@ -31,7 +34,8 @@ function App() {
                 "2022年，我们将作为承办方之一与东湖联合举办",
                 "第一届东湖湖畔音乐节",
             ],
-            backgroundImageSrc: "https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/home/concert-min.jpg",
+            backgroundImageSrc:
+                "https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/home/concert-min.jpg",
         },
     ];
 
@@ -42,6 +46,8 @@ function App() {
             {introductionData.map((data, index) => (
                 <Introduction key={index} data={data} />
             ))}
+            <ContactUs />
+            <Footer />
         </>
     );
 }
