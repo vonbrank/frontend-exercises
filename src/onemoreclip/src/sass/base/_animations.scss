@@ -1,0 +1,51 @@
+.scroll-reveal-container {
+    transition: all 1s;
+    // position: relative;
+    width: 100%;
+    // height: 100%;
+
+    opacity: 1;
+
+    &.hidden {
+        opacity: 0;
+        overflow: visible;
+
+        &--left {
+            transform: translateX(-50vw);
+
+            .scroll-reveal-placeholder {
+                left: 100%;
+            }
+        }
+
+        &--right {
+            transform: translateX(50vw);
+
+            .scroll-reveal-placeholder {
+                right: 100%;
+            }
+        }
+    }
+
+    &.hidden--bottom {
+        transform: translateY(8rem);
+
+        .scroll-reveal-placeholder {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 100%;
+        }
+    }
+
+    .scroll-reveal-placeholder {
+        /* content: " "; */
+        position: absolute;
+        top: 50%;
+        // left: 0;
+        height: 100%;
+        width: 100vw;
+        display: inline-block;
+        transform: translateY(-50%);
+        // background-color: red;
+    }
+}

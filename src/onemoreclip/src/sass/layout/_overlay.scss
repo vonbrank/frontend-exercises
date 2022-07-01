@@ -1,0 +1,19 @@
+.overlay {
+    display: none;
+    backdrop-filter: blur(20px);
+    @include respond(tab-port) {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba($color-black, 0.8);
+        z-index: 500;
+        transform: translateX(100vw);
+        transition: all 0.5s;
+        &.active {
+            transform: translateX(0);
+        }
+    }
+}

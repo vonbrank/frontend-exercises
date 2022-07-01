@@ -1,0 +1,47 @@
+.contact-us {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        list-style: none;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            gap: 6.4rem;
+        }
+    }
+
+    &__item {
+        @include revealUp;
+    }
+
+    &__icon {
+        font-size: 4.8rem;
+        margin-bottom: 2.4rem;
+        display: inline-block;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        line-height: 1.8;
+        font-weight: 500;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__link {
+        &,
+        &:link,
+        &:visited {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+        }
+    }
+}

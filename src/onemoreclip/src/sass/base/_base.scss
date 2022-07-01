@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 16px * 75% = 12px
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%; //1rem = 16px * 56.25% = 9px
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%; //1rem = 16px * 50% = 8px
+    }
+
+    @include respond(phone) {
+        font-size: 37.5%; //1rem = 16px * 37.5% = 6px
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Noto Sans SC", "'Rubik'", sans-serif;
+    color: $font-color;
+    // overflow-x: hidden;
+    position: relative;
+}

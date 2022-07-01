@@ -1,0 +1,126 @@
+.features {
+    // @include revealUp;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 6.4rem;
+        // margin-right: 0;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 38.4rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            height: 0.4rem;
+            width: 9.6rem;
+            left: 0;
+            top: 4.8rem;
+            background-color: $color-primary;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            height: 0.4rem;
+            width: 9.6rem;
+            right: 0;
+            bottom: 4.8rem;
+            background-color: $color-primary;
+        }
+    }
+
+    &__content {
+        // grid-column: 1 / 5;
+    }
+
+    &__about {
+        font-size: 1.8rem;
+        line-height: 1.8;
+        margin-bottom: 4.8rem;
+        // color: $font-color-light-1;
+
+        // transition: all 1s;
+
+        // &.lazy {
+        //     transform: translateY(8rem);
+        //     opacity: 0;
+        // }
+
+        @include revealUp;
+    }
+
+    & {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3.2rem;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.feature {
+    & {
+        transition: transform 0.4s, box-shadow 0.4s;
+        padding: 2.4rem;
+        border-radius: $border-radius-sm;
+    }
+
+    &:hover {
+        box-shadow: 0 1.6rem 3.2rem rgba($color-black, 0.1);
+        transform: scale(1.05);
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 1.6rem;
+        font-weight: 700;
+        color: $font-color-dark-1;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+    }
+
+    &__icon {
+        width: 6.4rem;
+        height: 6.4rem;
+        margin-bottom: 2.4rem;
+        color: $color-primary;
+        padding: 1.6rem;
+        background-color: $color-primary-light-1;
+        border-radius: 50%;
+    }
+
+    &__img {
+        & {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            // position: absolute;
+            // right: 0;
+            // top: 0;
+            @include revealRight;
+            transition: all 1s;
+        }
+
+        &.lazy {
+            filter: blur(20px);
+        }
+
+        &-container {
+            // width: 100%;
+            // height: 100%;
+
+            // padding: 9.6rem 0;
+        }
+    }
+}

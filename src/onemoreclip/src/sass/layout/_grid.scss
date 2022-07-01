@@ -1,0 +1,32 @@
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 4.8rem;
+}
+
+.grid {
+    display: grid;
+    row-gap: $gutter-vertical;
+    column-gap: $gutter-horizontal;
+
+    &--col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &--col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &--footer {
+        grid-template-columns: 1.5fr 1.5fr repeat(3, 1fr);
+
+        @include respond(tab-port) {
+            grid-template-columns: repeat(6, 1fr);
+            column-gap: 3.2rem;
+        }
+    }
+}
