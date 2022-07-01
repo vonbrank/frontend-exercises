@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "react-icons": "^4.4.0",
     "sass": "^1.53.0",
     "scrollreveal": "^4.0.9"
   }
