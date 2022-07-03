@@ -22,7 +22,12 @@ const scrollOptionsList = {
     },
 };
 
-export const ScrollRevealProvider = ({ children, options, optionsName }) => {
+export const ScrollRevealProvider = ({
+    children,
+    options,
+    optionsName,
+    className,
+}) => {
     const ref = useRef();
     const realOptions = options ? options : scrollOptionsList[optionsName];
     useEffect(() => {
@@ -30,6 +35,10 @@ export const ScrollRevealProvider = ({ children, options, optionsName }) => {
         return () => {
             ScrollReveal().clean(ref.current);
         };
-    }, [ref]);
-    return <div ref={ref}>{children}</div>;
+    }, [ref, realOptions]);
+    return (
+        <div ref={ref} className={className}>
+            {children}
+        </div>
+    );
 };
