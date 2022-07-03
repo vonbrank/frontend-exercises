@@ -5,6 +5,8 @@ import {
     navigationBackgroundToDark,
     navigationBackgroundToLight,
 } from "../../slices/NavigationSlice";
+import LazyLoadImage from "../LazyLoadImage";
+
 const Header = () => {
     const selector = (state) => {
         return {
@@ -84,8 +86,8 @@ const Header = () => {
                 <h1 className="heading-primary">让热爱发光</h1>
             </div>
             <div className="header__bg-img-box">
-                <img
-                    src="https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/hero/hero-01.jpg"
+                <LazyLoadImage
+                    src="https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/hero/hero-01-lazy.jpg"
                     data-src="https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/hero/hero-01.jpg"
                     alt="a girl holding camera"
                     className="header__bg-img"

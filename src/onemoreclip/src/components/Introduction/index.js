@@ -1,13 +1,14 @@
 import React from "react";
+import LazyLoadImage from "../LazyLoadImage";
 
 const Introduction = ({ data }) => {
-    const { title, lines, backgroundImageSrc } = data;
+    const { title, lines, backgroundImageSrcLazy, backgroundImageSrc } = data;
     return (
         <section className="section-intro">
             <div className="container intro__container">
                 <div className="intro__bg-img-box">
-                    <img
-                        src={backgroundImageSrc}
+                    <LazyLoadImage
+                        src={backgroundImageSrcLazy}
                         data-src={backgroundImageSrc}
                         alt="a beautiful girl"
                         className="intro__bg-img"

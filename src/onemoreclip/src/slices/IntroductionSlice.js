@@ -11,6 +11,7 @@ export const introductionSlice = createSlice({
                     "成员作品曾被收录入视觉中国图库",
                     "我们承接室内外人像摄影、动物摄影、活动记录等业务",
                 ],
+                backgroundImageSrcLazy: "https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/home/girl-lazy.jpg",
                 backgroundImageSrc:
                     "https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/home/girl.jpg",
             },
@@ -22,6 +23,7 @@ export const introductionSlice = createSlice({
                     "可为您提供质量上乘的视频作品",
                     "我们曾与南宁市第二中学、广西育杰教育集团达成合作",
                 ],
+                backgroundImageSrcLazy: "https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/home/street-min-lazy.jpg",
                 backgroundImageSrc:
                     "https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/home/street-min.jpg",
             },
@@ -32,6 +34,7 @@ export const introductionSlice = createSlice({
                     "2022年，我们将作为承办方之一与东湖联合举办",
                     "第一届东湖湖畔音乐节",
                 ],
+                backgroundImageSrcLazy: "https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/home/concert-lazy.jpg",
                 backgroundImageSrc:
                     "https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20220630-OneMoreClipWebPage/home/concert-min.jpg",
             },
