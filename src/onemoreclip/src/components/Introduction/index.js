@@ -1,5 +1,6 @@
 import React from "react";
 import LazyLoadImage from "../LazyLoadImage";
+import { ScrollRevealProvider } from "../../utils/providers";
 
 const Introduction = ({ data }) => {
     const { title, lines, backgroundImageSrcLazy, backgroundImageSrc } = data;
@@ -16,11 +17,15 @@ const Introduction = ({ data }) => {
                 </div>
                 <div className="intro">
                     <div className="intro__text">
-                        <p className="intro__title">{title}</p>
+                        <ScrollRevealProvider optionsName={"left"}>
+                            <p className="intro__title">{title}</p>
+                        </ScrollRevealProvider>
                         {lines.map((line, index) => (
-                            <p className="intro__line" key={index}>
-                                {line}
-                            </p>
+                            <ScrollRevealProvider optionsName={"right"}>
+                                <p className="intro__line" key={index}>
+                                    {line}
+                                </p>
+                            </ScrollRevealProvider>
                         ))}
                     </div>
                 </div>
